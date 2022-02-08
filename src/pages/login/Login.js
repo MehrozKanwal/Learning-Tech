@@ -24,7 +24,7 @@ export default function Login() {
   useEffect(() => {
     if(user){
     
-      console.log("hellow")
+      // console.log("hellow")
       {documents && documents.map((use)=>{
        if (projectAuth.currentUser.uid === use.id){
          if(use.categorytype === "teacher"){

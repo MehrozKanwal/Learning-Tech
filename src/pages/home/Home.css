@@ -6,6 +6,7 @@
 .container{
     position: relative;
     font-family: 'Rubik';
+    margin-bottom: 400px;
 }
 .container p{
     color: #5E5E5F;
@@ -71,9 +72,12 @@
 }
 
 
-.all-courses{
+.all-courses h1{
  font-family: 'Rubik';
  margin: 2rem 10%;
+ position: absolute;
+ top: 100%;
+ left: 16%;
 }
 /* .course-cart{
     height: 8rem ;

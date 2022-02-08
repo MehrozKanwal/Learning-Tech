@@ -41,8 +41,8 @@ margin: 1rem;
 width: 60%;
 }
 .user-img{
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     border: 1px solid #5825E9;
 }
@@ -54,11 +54,11 @@ width: 60%;
 .signupbtn-link span{
     padding: 1rem;
     font-family: 'Rubik';
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     
 }
 .log-btn{
-    margin-top: 5px;
+    margin-top: 3px;
 }
 .link-toggle {
     display: none;
