@@ -1,0 +1,17 @@
+.courses-container h1 {
+    font-size: 20pt;
+    position: absolute;
+    left: 25%;
+    top: 150px;
+    font-family: "Rubik";
+    font-size: 20pt;
+    font-weight:normal;
+    
+}
+.courses-container h2 {
+    position: absolute;
+    left: 25.3%;
+    top: 250px;
+    font-family: 'Rubik';
+    border-bottom: 3px solid #5825E9;
+}

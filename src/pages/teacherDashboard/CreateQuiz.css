@@ -1,0 +1,57 @@
+
+.create-quiz-container .complete-btn {
+    margin-left: 130px;
+    background: white;
+    color: #5825E9;
+}
+.create-quiz-container .complete-btn:hover {
+    background-color: #5825E9;
+    color: white;
+    transition: 0.3s;
+}
+.create-quiz-container input {
+    position: relative;
+    top: 110px;
+    width: 550px;
+    margin-bottom: 50px;
+}
+.create-quiz-container .options {
+    width: 150px;
+}
+.create-quiz-container .option-add-btn {
+    /* position: relative; */
+    /* top: 80px; */
+    /* margin-left: 0px; */
+    background: white;
+    color: #5825E9;
+    margin: -110px 0 0 160px;
+}
+.create-quiz-container .option-add-btn:hover {
+    background: #5825E9;
+    color: white;
+    transition: 0.3s;
+}
+.create-quiz-container .quiz-submit-btn {
+    margin-top: -20px;
+}
+.create-quiz-container .answer-heading {
+        position: relative;
+        left: 390px;
+        top: -35px;
+}
+.create-quiz-container .answer {
+    position: absolute;
+    top: 240px;
+    left: 390px;
+    width: 150px;
+
+}
+.create-quiz-container p{
+    position: relative;
+    top: 70px;
+
+}
+.option-container {
+    display: flex;
+    align-items: center;
+}

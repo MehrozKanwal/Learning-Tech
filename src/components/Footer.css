@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quintessential&family=Rubik:wght@300&family=Source+Serif+4:wght@500&family=Ubuntu:wght@300&display=swap');
+.footer{
+    width: 100%;
+    background: #5E5E5F;
+    color: white;
+    font-size: larger;
+    font-family: "Rubik";
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    font-weight: 200;
+}
+.footer .footer-inf{
+    margin: 1rem;
+    padding: 0 2rem ;
+    font-size: 1.1rem;
+}
+.footer .footer-inf ul{
+    list-style: none;
+    line-height: 2.3rem;
+}
+.footer-logo img{
+   width: 50%;
+   margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.footer-links{
+    padding: 3rem;
+    padding-top: 6rem;
+    line-height: 3rem;
+}
+.f-links ul{
+    font-size: 1.7rem;
+    list-style: none;
+    display: flex;
+    justify-content:center;
+}
+.f-links ul li a{
+    cursor: pointer;
+    color: white;
+    padding: 0.9rem;
+}
+
+@media only screen and (max-width: 709px) {
+    .footer{
+    flex-direction: column;
+    
+    }
+    .f-links ul{
+    justify-content: flex-start;
+    
+    }
+    .f-links ul li a{
+        padding: 8px;
+    }
+    .footer-links{
+        padding: 2rem;
+        padding-top: 2rem;
+        line-height: 2rem;
+    }
+}

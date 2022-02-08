@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.auth-form {
+    max-width: 360px;
+    margin: 60px auto;
+    padding: 10px;
+    font-size: larger;
+    font-family: 'Ubuntu';
+    text-align: center;
+   
+  }
+
+.auth-form input{
+    display: flex;
+    border-radius:1rem;
+    border: 1px solid rgb(219, 218, 218);
+    padding: 10px;
+    width: 18rem;
+    font-size: 0.9em;
+    margin: 20px;
+    color: #000000;
+    font-family: 'Montserrat',Helvetica, sans-serif;
+
+}
+.auth-form input::placeholder{
+    color: black;
+}
+
+
+ .auth-form p{
+     text-align: center;
+    margin-top: 1rem;
+     color: rgb(102, 99, 99);
+     display: flex;
+     flex-direction: column;
+ }
+ .auth-form a{
+    color: rgb(102, 99, 99);
+
+ }
+ .btn{
+     font-size: 1.4rem;
+     color: white;
+     background-color: #5825E9;
+     padding: 0.7rem 2rem .7rem 2rem ;
+     border: 1px solid grey;
+     border-radius: 1rem; 
+     cursor: pointer;
+ }
+ .radio-select {
+     display: flex;
+     font-family: 'Rebika';
+     margin-right: 3rem;
+ }
+.radio-select label{
+        text-align: center;
+        margin-top: 1rem;
+        color: rgb(102, 99, 99);
+        display: flex;
+       
+}
+ 

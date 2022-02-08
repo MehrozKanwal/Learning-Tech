@@ -1,0 +1,57 @@
+.create-form-container {
+    position: absolute;
+    left: 25%;
+    top: 150px;
+    font-family: "Rubik";
+    font-size: 10pt;
+    
+}
+.create-form-container h1 {
+    margin-bottom: -40px;
+}
+.create-form-container input {
+    height: 40px;
+    width: 250px;
+    border: 1px solid #5E5E5F;
+    border-radius: 5px;
+    padding: 10px;
+}
+.create-form-container textarea {
+    border-radius: 5px;
+    position: relative;
+    top: 130px;
+    left: -250px;
+    padding: 10px;
+    resize: none;
+    font-family: 'Rubik';
+
+}
+
+.create-form-container h2 {
+    position: relative;
+    top: 140px;
+}
+.attach-video1 {
+    position: absolute;
+    top: 290px;
+    left: 0px;
+}
+.create-form-container button {
+    width: 120px;
+    height: 40px;
+    font-family: 'Rubik';
+    font-size: 12pt;
+    border: solid #5825E9;
+    background: #5825E9;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    position: absolute;
+    left: 0px;
+    top: 350px;
+    cursor: pointer;
+}
+.create-quiz-container h2 {
+    position: relative;
+    top: 90px;
+}

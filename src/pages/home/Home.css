@@ -1,0 +1,120 @@
+.slader{
+    width: 100%;
+    height: 75vh;
+   
+}
+.container{
+    position: relative;
+    font-family: 'Rubik';
+}
+.container p{
+    color: #5E5E5F;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+ .container h1{
+    position: absolute;
+    color: #5E5E5F;
+    top: 40%;
+    left: 10%;
+}
+.container h3{
+    position: absolute;
+    top: 85%;
+    left: 10%;
+}
+.container .teach{
+    position: absolute;
+    color: #5E5E5F;
+    top: 78%;
+    left: 10%;
+}
+.container .btn-slader {
+    position: absolute;
+    top: 58%;
+    left: 10%;
+    color: white;
+    font-size: 1rem;
+    background: #5825E9;
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+  
+  .container .btn-slader:hover {
+    background-color: white;
+    color: #5825E9;
+  }
+
+  .container-2{
+   
+    font-family: 'Rubik';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+   
+}
+ .footer-img img{
+    margin-left: 13%;
+    margin-bottom: 0;  
+}
+.foot-details{
+    margin-top: 4rem;
+    line-height: 2.6rem;
+    color: #5E5E5F;
+    font-weight: bold;
+    justify-content: end;
+}
+
+
+.all-courses{
+ font-family: 'Rubik';
+ margin: 2rem 10%;
+}
+/* .course-cart{
+    height: 8rem ;
+    width: 10rem;
+    border: 1px solid black;
+} */
+
+
+
+  @media only screen and (max-width: 1037px) {
+  .footer-img img{
+    width:80%;
+    height: 100%;
+    position:relative;
+    
+  }
+  .foot-details{
+      font-size: 13px;
+    margin-top: 4rem;
+    color: #5E5E5F;
+    font-weight: bold;
+}
+}
+@media only screen and (max-width: 600px) {
+    .foot-details h1{
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+    .footer-img img{
+        width:80%;
+        height: 100%;
+        margin-top: 2rem;
+        
+      }
+}
+@media only screen and (max-width: 415px) {
+    .foot-details{
+        font-size: smaller;
+    }
+    .foot-details h1{
+        line-height: 1.5rem;
+        font-size: 16px;
+    }
+}
