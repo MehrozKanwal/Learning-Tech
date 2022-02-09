@@ -70,14 +70,17 @@
     font-weight: bold;
     justify-content: end;
 }
-
+.all-courses {
+    margin-left: -60px;
+}
 
 .all-courses h1{
  font-family: 'Rubik';
- margin: 2rem 10%;
+ font-size: 15pt;
+ margin: 3.5rem 10%;
  position: absolute;
- top: 100%;
- left: 16%;
+ top: 98%;
+ left: 11%;
 }
 /* .course-cart{
     height: 8rem ;
