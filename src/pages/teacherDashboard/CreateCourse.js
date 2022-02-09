@@ -23,7 +23,7 @@ export default function CreateCourse() {
   const [loading, setLoading] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  let [attachment, setAttachment] = useState([]);
+  let [attachment, setAttachment] = useState("");
   const [attachmentError, setAttachmentError] = useState(null);
 
   const handleSubmit = async (e) => {
@@ -41,7 +41,7 @@ export default function CreateCourse() {
     const course = {
       title,
       description,
-      attachment:[],
+      attachment: imgUrl,
       createdBy,
     };
     await addDocument(course);
@@ -62,8 +62,8 @@ export default function CreateCourse() {
     console.log(selected);
     console.log(e.target.files);
     
-    attachment = Object.entries(e.target.files);
-    console.log(attachment);
+    // attachment = Object.entries(e.target.files);
+    // console.log(attachment);
 
     if (!selected) {
       setAttachmentError("Please select a file");
