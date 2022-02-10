@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useFirestore } from "../../hooks/useFireStore";
 import { useNavigate } from "react-router-dom";
@@ -22,6 +22,11 @@ export default function CreateQuiz() {
   const [newOption, setNewOption] = useState("");
   const [options, setOptions] = useState([]);
   const optionInput = useRef(null);
+  useEffect(() => {
+    if(!user){
+     navigate("/")
+    }
+  }, [!user,navigate])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

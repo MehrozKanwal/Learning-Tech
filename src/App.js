@@ -17,26 +17,25 @@ import { useAuthContext } from './hooks/useAuthContext';
 import './App.css';
 
 function App() {
-  const {user, authIsReady} = useAuthContext()
   return (
     <div className="App">
      <BrowserRouter>
      <Navbar />
       <Routes>
-        <Route exact path="/login" element={!user ? <Login />: <Home />} />
-        <Route exact path="/signup" element={!user ? <Signup />: <Home />} />
-        <Route exact path="/dashboard" element={user ? <StudentDashboard /> : <Signup />} />
+        <Route exact path="/login" element={ <Login />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/dashboard" element={ <StudentDashboard /> } />
         <Route exact path="/" element={<Home /> } />
-        <Route exact path="/course" element={<Course />} />
-        <Route exact path="/course/:id" element={user ? <Course />:<Login />} />
+        {/* <Route exact path="/course" element={<Course />} /> */}
+        <Route exact path="/course/:id" element={ <Course />} />
 
         <Route exact path="/enrolledcourse/:id" element={<EnrolledCourse />} />
         <Route exact path="/quiz" element={<Quiz />} />
       
-        <Route exact path="/courses" element={user ? <Courses /> : <Login />} />
-        <Route exact path="/create-course" element={user ?<CreateCourse />: <Login />} />
-        <Route exact path="/create-quiz" element={user ?<CreateQuiz />:<Login />} />
-        <Route exact path="/active-quiz" element={user ?<ActiveQuiz />:<Login />} />
+        <Route exact path="/courses" element={<Courses />} />
+        <Route exact path="/create-course" element={<CreateCourse />} />
+        <Route exact path="/create-quiz" element={<CreateQuiz />} />
+        <Route exact path="/active-quiz" element={<ActiveQuiz />} />
       </Routes>
        <Footer />
      </BrowserRouter>  
