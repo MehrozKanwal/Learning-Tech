@@ -17,6 +17,7 @@ display: flex;
     border-radius: 5px;
     padding: 10px;
     margin: 1.5rem;
+    margin-left: 0;
 }
 .create-form-container textarea {
     border-radius: 5px;
@@ -28,14 +29,22 @@ display: flex;
 .text-input{
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
-.create-form-container h2 {
-    
+.create-form-container button { 
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 .attach-video1 {
   display: flex;
   flex-direction: column;
+}
+
+.attach-video2 {
+    position: absolute;
+    top: 330px;
+    left: 0px;
 }
 .create-form-container button {
     width: 120px;

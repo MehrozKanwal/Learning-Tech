@@ -9,6 +9,7 @@ import { useStore } from "../../hooks/useFireStore";
 import { projectStorage } from "../../firebase/Config";
 import { useFirestore } from "../../hooks/useFireStore";
 import Spinner from "../../components/Spinner";
+import { useDocument } from "../../hooks/useDocument";
 
 
 import SideNav from "../../components/SideNav";
@@ -18,8 +19,10 @@ export default function CreateCourse() {
   const navigate = useNavigate();
   const { user } = useAuthContext();
   const { addDocument, response } = useFirestore("course");
+
   const [loading, setLoading] = useState(null);
   const [title, setTitle] = useState("");
+  const {document} = useDocument('course');
   const [description, setDescription] = useState("");
   let [attachment, setAttachment] = useState("");
   const [attachmentError, setAttachmentError] = useState(null);
@@ -47,6 +50,7 @@ export default function CreateCourse() {
       description,
       attachment: imgUrl,
       createdBy,
+      
     };
     await addDocument(course);
     if (!response.error) {
@@ -55,11 +59,11 @@ export default function CreateCourse() {
   };
   const handleFileChange = (e) => {
     setAttachment(null);
-    // let selected = e.target.files[0];
-    let selected;
-    for (let i = 0; i < e.target.files.length; i++) {
-      selected = e.target.files[i];
-    }
+    let selected = e.target.files[0];
+    // let selected;
+    // for (let i = 0; i < e.target.files.length; i++) {
+    //   selected = e.target.files[i];
+    // }
     //   selected["id"] = Math.random();
     //   setAttachment((prevAttachment) => [...prevAttachment, selected]);
     // }
@@ -111,6 +115,7 @@ export default function CreateCourse() {
             accept="video/mp4,video/x-m4v,video/*"
             className="attach-video1"
           />
+          
           {attachmentError && <div className="error">{attachmentError}</div>}
           
           {!loading && <button>Create</button>}

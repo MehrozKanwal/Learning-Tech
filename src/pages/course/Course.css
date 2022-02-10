@@ -23,6 +23,7 @@
 }
 .course-header-container p {
   margin-top: 5px;
+  margin-bottom: 5px;
   color: rgb(240, 240, 240);
   font-size: 0.8rem;
   margin-left: 0;
@@ -43,8 +44,23 @@
 }
 .course-main-container video {
     height: 200px;
-    width: 400px;
+    border-radius: 10px;
     margin-left: 100px;
-    margin-top: 20px;
-    border: 1px solid black;
+    margin-top: 25px;
+}
+.loading {
+  font-family: 'Rubik';
+  font-size: 1rem;
+  text-align: center;
+
+}
+#quiz-link { 
+  cursor: pointer;
+}
+.course-header-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "rubik";
+
 }

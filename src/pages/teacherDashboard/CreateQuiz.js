@@ -7,6 +7,7 @@ import "../../components/SideNav";
 import "./CreateQuiz.css";
 import SideNav from "../../components/SideNav";
 import Spinner from "../../components/Spinner";
+import { useCollection } from "../../hooks/useCollection";
 
 export default function CreateQuiz() {
   const [ loading, setLoading ] = useState(null);
@@ -22,6 +23,7 @@ export default function CreateQuiz() {
   const [newOption, setNewOption] = useState("");
   const [options, setOptions] = useState([]);
   const optionInput = useRef(null);
+  // const {courses} = useCollection('course');
   useEffect(() => {
     if(!user){
      navigate("/")
@@ -31,28 +33,34 @@ export default function CreateQuiz() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
     setQuestion("");
     setAnswer("");
     questionCollection = [question, options, answer];
-
+ 
     const createdBy = {
       displayName: user.displayName,
       photoURL: user.photoURL,
       id: user.uid,
     };
+     
+
+
     const quizCollection = {
       question,
       options: options,
       answer,
       createdBy,
     };
+    
+
 
     await addDocument(quizCollection);
     if (!response.error) {
       // navigate("/courses");
       window.location.reload();
     }
+
+    
     // console.log(quizCollection);
   };
 
@@ -65,20 +73,24 @@ export default function CreateQuiz() {
     }
     setNewOption("");
     optionInput.current.focus();
+    
   };
   const handleComplete = (e) => {
     e.preventDefault();
     navigate("/courses");
   };
 
+
   return (
-    <div>
+    <div className="create-quiz">
+      <div>
       <SideNav />
+      </div>
       <div className="create-form-container create-quiz-container ">
         <form onSubmit={handleSubmit}>
           <h1>Create New Quiz </h1>
           <h2 className="question-heading">Question</h2>
-
+          
           {/* taking question */}
           <input
             required
@@ -98,6 +110,7 @@ export default function CreateQuiz() {
               onChange={(e) => setNewOption(e.target.value)}
               value={newOption}
               ref={optionInput}
+
             />
             <button onClick={handleAdd} className="option-add-btn">
               Add

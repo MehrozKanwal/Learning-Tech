@@ -1,20 +1,20 @@
-import StudentDashboard from './pages/studentDashboard/StudentDashboard';
-import Login from './pages/login/Login';
-import Signup from './pages/signup/Signup';
-import Home from './pages/home/Home';
-import Course from './pages/course/Course';
-import EnrolledCourse from './pages/enrolledCourse/EnrolledCourse';
-import Quiz from './pages/quiz/Quiz';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ActiveQuiz from './pages/teacherDashboard/ActiveQuiz';
-import Courses from './pages/teacherDashboard/Courses';
-import CreateCourse from './pages/teacherDashboard/CreateCourse';
-import CreateQuiz from './pages/teacherDashboard/CreateQuiz'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useAuthContext } from './hooks/useAuthContext';
+import StudentDashboard from "./pages/studentDashboard/StudentDashboard";
+import Login from "./pages/login/Login";
+import Signup from "./pages/signup/Signup";
+import Home from "./pages/home/Home";
+import Course from "./pages/course/Course";
+import EnrolledCourse from "./pages/enrolledCourse/EnrolledCourse";
+import Quiz from "./pages/quiz/Quiz";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ActiveQuiz from "./pages/teacherDashboard/ActiveQuiz";
+import Courses from "./pages/teacherDashboard/Courses";
+import CreateCourse from "./pages/teacherDashboard/CreateCourse";
+import CreateQuiz from "./pages/teacherDashboard/CreateQuiz";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
 //style
-import './App.css';
+import "./App.css";
 
 function App() {
   return (

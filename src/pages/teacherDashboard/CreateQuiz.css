@@ -1,8 +1,14 @@
-
+.create-quiz{
+    display: flex;
+    
+}
 .create-quiz-container .complete-btn {
-    margin-left: 130px;
+    margin-left: 0rem;
     background: white;
     color: #5825E9;
+    display: block;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem;
 }
 .create-quiz-container .complete-btn:hover {
     background-color: #5825E9;
@@ -10,45 +16,32 @@
     transition: 0.3s;
 }
 .create-quiz-container input {
-    position: relative;
-    top: 110px;
-    width: 550px;
-    margin-bottom: 50px;
+    width: 20rem;
+    margin-bottom: 20px;
+    margin-left: 0px !important;
 }
 .create-quiz-container .options {
-    width: 150px;
+    width: 170px;
+    margin-left: 0px;
 }
 .create-quiz-container .option-add-btn {
-    /* position: relative; */
-    /* top: 80px; */
-    /* margin-left: 0px; */
+  
     background: white;
     color: #5825E9;
-    margin: -110px 0 0 160px;
+    margin-top: 22px !important;
+    
 }
 .create-quiz-container .option-add-btn:hover {
     background: #5825E9;
     color: white;
     transition: 0.3s;
 }
-.create-quiz-container .quiz-submit-btn {
-    margin-top: -20px;
-}
-.create-quiz-container .answer-heading {
-        position: relative;
-        left: 390px;
-        top: -35px;
-}
-.create-quiz-container .answer {
-    position: absolute;
-    top: 240px;
-    left: 390px;
-    width: 150px;
-
+.create-quiz-container h2 {
+    margin-top: 25px !important;
+   
 }
 .create-quiz-container p{
-    position: relative;
-    top: 70px;
+  margin-left: 1.6rem;
 
 }
 .option-container {
