@@ -17,7 +17,7 @@ export default function Navbar() {
   const { user } = useAuthContext();
   const { logout, isPending } = useLogout();
   // const { documents } = useCollection('users')
-  const {document} = useDocument('users', user.id)
+  const {document} = useDocument('users')
   const navigate = useNavigate()
 
 
@@ -77,12 +77,11 @@ export default function Navbar() {
                  
 
 
-              {document.categorytype === "teacher" && 
              
                <Link className="teacher-dashboard" to="/courses">
                 {" "}
                 Instructor{" "}
-              </Link>}
+              </Link>
               <Link className="signupbtn-link" to="/dashboard">
                 <img className="user-img" src={user.photoURL} />{" "}
                 <span>{user.displayName}</span>{" "}
