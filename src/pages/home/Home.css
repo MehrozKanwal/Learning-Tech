@@ -6,7 +6,6 @@
 .container{
     position: relative;
     font-family: 'Rubik';
-    margin-bottom: 400px;
 }
 .container p{
     color: #5E5E5F;
@@ -70,17 +69,15 @@
     font-weight: bold;
     justify-content: end;
 }
-.all-courses {
-    margin-left: -60px;
+.all-courses{
+    margin-left: 10%;
 }
 
 .all-courses h1{
  font-family: 'Rubik';
  font-size: 15pt;
- margin: 3.5rem 10%;
- position: absolute;
- top: 98%;
- left: 11%;
+  margin-top: 3.5rem;
+  
 }
 /* .course-cart{
     height: 8rem ;
@@ -103,6 +100,9 @@
     color: #5E5E5F;
     font-weight: bold;
 }
+.slader{
+    height: 60vh;
+}
 }
 @media only screen and (max-width: 600px) {
     .foot-details h1{
@@ -115,6 +115,9 @@
         margin-top: 2rem;
         
       }
+      .slader{
+        height: 40vh;
+    }
 }
 @media only screen and (max-width: 415px) {
     .foot-details{
@@ -123,5 +126,19 @@
     .foot-details h1{
         line-height: 1.5rem;
         font-size: 16px;
+    }
+    .slader{
+        height: 35vh;
+    }
+    .container h1{
+        font-size: small;
+        font-size: 1rem;
+        position: absolute;
+        color: #5E5E5F;
+        top: 40%;
+        left: 10%;
+    }
+    .container .btn-slader {
+    top: 53%;
     }
 }

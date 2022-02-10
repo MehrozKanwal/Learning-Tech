@@ -33,7 +33,8 @@ export default function Quiz() {
           <h2>Result</h2>
           <h3>{score}</h3>
           {score > 5 ? <h3 className="pass-status">Passed</h3> : <h3 className="pass-status">Failed</h3>}
-          <button className="close-btn" >Close</button>
+          <NavLink to="/"><button  className="close-btn" >Close</button>
+          </NavLink>
         </div>
       ) : (
         documents &&
@@ -76,7 +77,7 @@ export default function Quiz() {
         })
         )}
         {show &&
-        <button className="mark-btn" onClick={()=>setShowFinalResults(true)?setShow(false):setShow(true)}>Mark as done</button>
+        <button className="mark-btn"  onClick={()=>setShowFinalResults(true)?setShow(false):setShow(true)}>Mark as done</button>
         }
     </div>
   );

@@ -23,7 +23,12 @@ export default function CreateQuiz() {
   const [newOption, setNewOption] = useState("");
   const [options, setOptions] = useState([]);
   const optionInput = useRef(null);
-  const {courses} = useCollection('course');
+  // const {courses} = useCollection('course');
+  useEffect(() => {
+    if(!user){
+     navigate("/")
+    }
+  }, [!user,navigate])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -77,8 +82,10 @@ export default function CreateQuiz() {
 
 
   return (
-    <div>
+    <div className="create-quiz">
+      <div>
       <SideNav />
+      </div>
       <div className="create-form-container create-quiz-container ">
         <form onSubmit={handleSubmit}>
           <h1>Create New Quiz </h1>

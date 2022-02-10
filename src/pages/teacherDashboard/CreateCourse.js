@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../../components/SideNav";
 import "./CreateCourse.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useCollection } from "../../hooks/useCollection";
@@ -9,12 +9,10 @@ import { useStore } from "../../hooks/useFireStore";
 import { projectStorage } from "../../firebase/Config";
 import { useFirestore } from "../../hooks/useFireStore";
 import Spinner from "../../components/Spinner";
+import { useDocument } from "../../hooks/useDocument";
 
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 import SideNav from "../../components/SideNav";
-import { dblClick } from "@testing-library/user-event/dist/click";
-import { useDocument } from "../../hooks/useDocument";
 
 export default function CreateCourse() {
   const [users, setUsers] = useState([]);
@@ -28,6 +26,12 @@ export default function CreateCourse() {
   const [description, setDescription] = useState("");
   let [attachment, setAttachment] = useState("");
   const [attachmentError, setAttachmentError] = useState(null);
+
+  useEffect(() => {
+    if(!user){
+     navigate("/")
+    }
+  }, [!user,navigate])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,12 +83,14 @@ export default function CreateCourse() {
     console.log("Attachment updated");
   };
   return (
-    <div>
-      <SideNav />
+    <div className="create-course">
+    <div><SideNav /></div>
+      
       <div className="create-form-container">
         <h1>Create New Course</h1>
         <form onSubmit={handleSubmit}>
-          <input
+        <div className="text-input">
+        <input
             type="text"
             placeholder="Course Name"
             onChange={(e) => setTitle(e.target.value)}
@@ -97,6 +103,9 @@ export default function CreateCourse() {
             onChange={(e) => setDescription(e.target.value)}
             value={description}
           ></textarea>
+
+        </div>
+         
 
           <h2>Upload Video Lectures</h2>
           <input
