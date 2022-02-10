@@ -15,6 +15,7 @@ export default function Courses() {
         <h1>Welcome, <b>{user.displayName}</b> <br /> Your Teaching Journey Begins here</h1>
         <h2>My Courses </h2>
         { error && <p className="error">{error}</p>}
+  
         { documents && <CourseCard courses = {documents} />}
       </div>
     </div>
