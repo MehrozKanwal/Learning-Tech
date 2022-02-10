@@ -1,6 +1,6 @@
 .side-nav { 
     width: 300px;
-    height: 30rem;
+    height: 100%;
     border: 1px solid rgb(202, 202, 202);
     background: #DFDFDF;
 }
@@ -39,3 +39,14 @@
     font-size: 15pt; 
     margin-left: 46px;
 }
+@media only screen and (max-width: 709px) {
+    /* .sidenav{
+        display: none;
+    } */
+    .side-nav { 
+        width:200px;
+     
+        border: 1px solid rgb(202, 202, 202);
+        background: #DFDFDF;
+    }
+    }

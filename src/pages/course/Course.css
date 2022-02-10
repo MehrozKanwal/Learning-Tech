@@ -1,0 +1,66 @@
+.course-page {
+  margin-bottom: 100vh;
+}
+
+.course-header-container {
+  height: 300px;
+  width: 100%;
+  background-image: linear-gradient(135deg, #6b73ff 5%, #000dff 100%);
+  border: 1px solid white;
+  font-family: "Rubik";
+  padding-left: 100px;
+  color: white;
+}
+.course-header-container h1 {
+  font-family: "Rubik";
+  margin-top: 100px;
+  color: white;
+}
+.course-header-container h4 {
+  margin-top: 90px;
+  font-size: 1rem;
+  margin-left: 0px;
+}
+.course-header-container p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(240, 240, 240);
+  font-size: 0.8rem;
+  margin-left: 0;
+}
+.course-main-container h4 {
+  font-family: "Rubik";
+  margin-left: 100px;
+  font-size: 1.8rem;
+  margin-top: 60px;
+}
+.course-main-container p {
+  width: 60%;
+  margin-left: 100px;
+  word-wrap: break-word;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-family: "Rubik";
+}
+.course-main-container video {
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+.loading {
+  font-family: 'Rubik';
+  font-size: 1rem;
+  text-align: center;
+
+}
+#quiz-link { 
+  cursor: pointer;
+}
+.course-header-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "rubik";
+
+}

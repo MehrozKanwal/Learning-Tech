@@ -5,7 +5,7 @@ import {
 
 export default function SideNav() {
   return (
-  <div className='side-nav'>
+  <div className='side-nav teach-sidenav'>
     <h1>Dashboard</h1>
     <ul>
       <li>

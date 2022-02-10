@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../../components/SideNav";
 import "./CreateCourse.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useCollection } from "../../hooks/useCollection";
@@ -9,22 +9,29 @@ import { useStore } from "../../hooks/useFireStore";
 import { projectStorage } from "../../firebase/Config";
 import { useFirestore } from "../../hooks/useFireStore";
 import Spinner from "../../components/Spinner";
+import { useDocument } from "../../hooks/useDocument";
 
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
 import SideNav from "../../components/SideNav";
-import { dblClick } from "@testing-library/user-event/dist/click";
 
 export default function CreateCourse() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
   const { user } = useAuthContext();
   const { addDocument, response } = useFirestore("course");
+
   const [loading, setLoading] = useState(null);
   const [title, setTitle] = useState("");
+  const {document} = useDocument('course');
   const [description, setDescription] = useState("");
-  let [attachment, setAttachment] = useState([]);
+  let [attachment, setAttachment] = useState("");
   const [attachmentError, setAttachmentError] = useState(null);
+
+  useEffect(() => {
+    if(!user){
+     navigate("/")
+    }
+  }, [!user,navigate])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,8 +48,9 @@ export default function CreateCourse() {
     const course = {
       title,
       description,
-      attachment:[],
+      attachment: imgUrl,
       createdBy,
+      
     };
     await addDocument(course);
     if (!response.error) {
@@ -51,19 +59,19 @@ export default function CreateCourse() {
   };
   const handleFileChange = (e) => {
     setAttachment(null);
-    // let selected = e.target.files[0];
-    let selected;
-    for (let i = 0; i < e.target.files.length; i++) {
-      selected = e.target.files[i];
-    }
+    let selected = e.target.files[0];
+    // let selected;
+    // for (let i = 0; i < e.target.files.length; i++) {
+    //   selected = e.target.files[i];
+    // }
     //   selected["id"] = Math.random();
     //   setAttachment((prevAttachment) => [...prevAttachment, selected]);
     // }
     console.log(selected);
     console.log(e.target.files);
     
-    attachment = Object.entries(e.target.files);
-    console.log(attachment);
+    // attachment = Object.entries(e.target.files);
+    // console.log(attachment);
 
     if (!selected) {
       setAttachmentError("Please select a file");
@@ -75,12 +83,14 @@ export default function CreateCourse() {
     console.log("Attachment updated");
   };
   return (
-    <div>
-      <SideNav />
+    <div className="create-course">
+    <div><SideNav /></div>
+      
       <div className="create-form-container">
         <h1>Create New Course</h1>
         <form onSubmit={handleSubmit}>
-          <input
+        <div className="text-input">
+        <input
             type="text"
             placeholder="Course Name"
             onChange={(e) => setTitle(e.target.value)}
@@ -94,6 +104,9 @@ export default function CreateCourse() {
             value={description}
           ></textarea>
 
+        </div>
+         
+
           <h2>Upload Video Lectures</h2>
           <input
             onChange={handleFileChange}
@@ -102,6 +115,7 @@ export default function CreateCourse() {
             accept="video/mp4,video/x-m4v,video/*"
             className="attach-video1"
           />
+          
           {attachmentError && <div className="error">{attachmentError}</div>}
           
           {!loading && <button>Create</button>}

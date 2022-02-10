@@ -1,0 +1,92 @@
+.quiz-page {
+  font-family: "rubik";
+  margin-top: 50px;
+  margin-left: 200px;
+  height: 200vh;
+}
+.quiz-page h2 {
+  margin-left: 70%;
+  margin-top: -45px;
+}
+.quiz-page h1 {
+  margin-left: -70px;
+}
+
+.quiz-page span {
+  margin-left: -70px;
+}
+.quiz-page h4 {
+  font-family: "Rubik";
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 1.3rem;
+}
+.quiz-page p {
+  padding: 5px;
+  margin-left: 0px;
+  font-size: 1.2rem;
+}
+.option-style {
+  display: flex;
+}
+.option-style input {
+  position: relative;
+  top: 10px;
+  margin-right: 10px;
+}
+.final-result {
+  width: 500px;
+  height: 200px;
+  border: 1px solid white;
+  position: absolute;
+  top: 300px;
+  left: 25%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgb(236, 236, 236);
+}
+.final-result .pass-status {
+  position: relative;
+  top: -120px;
+  left: -4%;
+}
+.final-result h2 {
+  position: relative;
+  top: 100px;
+  font-family: "Rubik";
+  text-align: center;
+  right: 35%;
+  margin-bottom: 50px;
+  color: black;
+}
+.final-result h3 {
+  margin-left: 49%;
+  margin-top: 120px;
+  font-family: "Rubik";
+  color: #5825e9;
+}
+.close-btn {
+  width: 80px;
+  height: 30px;
+  margin-left: 43%;
+  position: relative;
+  top: -110px;
+  cursor: pointer;
+  background: #5825e9;
+  color: white;
+  font-family: "Rubik";
+  border: none;
+  border-radius: 5px;
+}
+.mark-btn {
+  width: 100px;
+  height: 30px;
+  background-color: #5825e9;
+  color: white;
+  font-family: "Rubik";
+  border: none;
+  margin-top: 30px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+

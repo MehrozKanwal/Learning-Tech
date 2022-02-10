@@ -1,39 +1,49 @@
 .create-form-container {
-    position: absolute;
-    left: 25%;
-    top: 150px;
     font-family: "Rubik";
     font-size: 10pt;
+    margin-left: 1rem;
     
 }
-.create-form-container h1 {
-    margin-bottom: -40px;
+.create-course{
+display: flex;
 }
+/* .create-form-container h1 {
+    margin-bottom: -40px;
+} */
 .create-form-container input {
-    height: 40px;
-    width: 250px;
+    /* height: 40px;    
+    width: 30rem; */
     border: 1px solid #5E5E5F;
     border-radius: 5px;
     padding: 10px;
+    margin: 1.5rem;
+    margin-left: 0;
 }
 .create-form-container textarea {
     border-radius: 5px;
-    position: relative;
-    top: 130px;
-    left: -250px;
-    padding: 10px;
+    padding: 1rem;
     resize: none;
     font-family: 'Rubik';
 
 }
+.text-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
 
-.create-form-container h2 {
-    position: relative;
-    top: 140px;
+.create-form-container button { 
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 .attach-video1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.attach-video2 {
     position: absolute;
-    top: 290px;
+    top: 330px;
     left: 0px;
 }
 .create-form-container button {
@@ -46,12 +56,8 @@
     color: white;
     font-weight: bold;
     border-radius: 7px;
-    position: absolute;
-    left: 0px;
-    top: 350px;
     cursor: pointer;
 }
 .create-quiz-container h2 {
-    position: relative;
-    top: 90px;
+   
 }

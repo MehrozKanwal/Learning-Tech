@@ -23,18 +23,23 @@ export default function Login() {
   }
   useEffect(() => {
     if(user){
-    
-      console.log()
+     console.log(user + "jhcujas")
+      
       {documents && documents.map((use)=>{
-       if (projectAuth.currentUser.uid === use.id){
+        const a = projectAuth.currentUser;
+       if (a.uid === use.id){
          if(use.categorytype === "teacher"){
+           console.log(a.categorytype)
            navigate("/courses")
+           
          } 
          else{
-           navigate("/")
+           navigate("/dashboard")
          }
        }
-      })}    }
+      })}  
+      }
+     
  }, [user,navigate])
   return <div>
     <form onSubmit={handleSubmit} className="auth-form">

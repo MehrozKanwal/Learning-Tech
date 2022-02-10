@@ -17,28 +17,24 @@ export default function Signup() {
   const { signup, isPending, error } = useSignup()
   const {user} = useAuthContext()
   const navigate = useNavigate()
+  useEffect(() => {
+    console.log('test',user);
+    if(user){
+      if(categorytype === "student"){
+        navigate("/dashboard")
+      }
+      else{
+        navigate("/courses")
+      }
+     
+     }
+ }, [user])
   const handleSubmit = (e) => {
     e.preventDefault()
     signup(email, password, displayName ,thumbnail,categorytype.category)
     
   }
-  useEffect(() => {
-    if(user){
-      if(categorytype === "student"){
-        navigate("/")
-      }
-      else{
-        navigate("/dashboard")
-      }
-     }
- }, [user,navigate])
-    
-  
-    
- 
-    
-    
-    
+   
   const handleChange = (e) => {
     const name = e.target.name
     const value= e.target.value

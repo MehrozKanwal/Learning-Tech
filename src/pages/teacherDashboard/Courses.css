@@ -1,17 +1,27 @@
-.courses-container h1 {
-    font-size: 20pt;
-    position: absolute;
-    left: 25%;
-    top: 150px;
+.teacher-dash{
+    display: flex;
     font-family: "Rubik";
-    font-size: 20pt;
+}
+
+.courses-container  {
+   margin-top: 1rem;
+    margin-left: 4rem;
     font-weight:normal;
+    font-family: 'Rubik';
+    margin-right: 0;
     
 }
 .courses-container h2 {
-    position: absolute;
-    left: 25.3%;
-    top: 250px;
+    margin-top: 1rem;
+    width: 8rem;
     font-family: 'Rubik';
     border-bottom: 3px solid #5825E9;
+}
+.courses-container b{
+color: #5825E9;
+}
+@media only screen and (max-width: 709px) {
+.teacher-sidenav{
+    /* display: none; */
+}
 }
