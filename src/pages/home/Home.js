@@ -1,8 +1,9 @@
 import React from "react";
 import sladerImg from "../../asset/slader.png";
 import footImg from "../../asset/slader2.png";
-import CourseCard from "../../components/CourseCard";
-import { useCollection } from "../../hooks/useCollection";
+import HomeCourseCard from "../../components/HomeCourseCard";
+import { useCollection } from "../../hooks/useCollection"
+import { Link } from "react-router-dom";
 
 //style
 import "./Home.css";
@@ -15,7 +16,8 @@ export default function Home() {
         <img className="slader" src={sladerImg} alt="slader" />
         <p>Your career journey begins here</p>
         <h1>START LEARNING TODAY</h1>
-        <button className="btn-slader">Signup</button>
+        <Link to='/signup'>
+        <button className="btn-slader">Signup</button></Link>
         <p className="teach">Want to teach?</p>
         <h3>Join now</h3>
       </div>
@@ -23,7 +25,7 @@ export default function Home() {
       <div className="all-courses">
         <h1>ALL COURSES</h1>
         {error && <p className="error">{error}</p>}
-        {documents && <CourseCard courses={documents} />}
+        {documents && <HomeCourseCard courses={documents} />}
         
       </div>
       <div className="container-2">
@@ -33,7 +35,8 @@ export default function Home() {
         <div className="foot-details">
           <h1>START TEACHING TODAY</h1>
           <p>from the comfort of your home</p>
-          <button className="btn">Signup</button>
+          <Link to='/signup'>
+          <button className="btn">Signup </button></Link>
         </div>
       </div>
     </div>

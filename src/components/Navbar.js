@@ -5,12 +5,21 @@ import { FaListUl } from "react-icons/fa";
 import navImg from "../asset/primary-logo.png";
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useLogout } from "../hooks/useLogout";
+import { useCollection } from "../hooks/useCollection";
+import { useNavigate, NavLink } from "react-router-dom";
+import { projectAuth } from "../firebase/Config";
 //style
 import "./Navbar.css";
+import SideNav from "./SideNav";
+import { useDocument } from "../hooks/useDocument";
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
   const { user } = useAuthContext();
   const { logout, isPending } = useLogout();
+  // const { documents } = useCollection('users')
+  const {document} = useDocument('users')
+  const navigate = useNavigate()
+
 
   return (
     <div className="navbar">
@@ -34,12 +43,42 @@ export default function Navbar() {
               </li>
               <li className="signup">
                 <Link to="/signup">SIGNUP</Link>
-              </li>{" "}
+              </li>
+                
+              
             </>
           )}
           {user && (
             <>
-              <Link className="teacher-dashboard" to="/courses">
+
+            {/* {documents && documents.map((use)=>{
+       if (projectAuth.currentUser.uid === use.id){
+         if(use.categorytype === "teacher"){
+          <Link className="teacher-dashboard" to="/courses">
+                {" "}
+                Instructor{" "}
+              </Link>
+          
+         
+           
+         } 
+        
+       }
+         console.log(use.categorytype)
+            }})}  
+               */}
+
+              
+
+
+
+
+
+                 
+
+
+             
+               <Link className="teacher-dashboard" to="/courses">
                 {" "}
                 Instructor{" "}
               </Link>
